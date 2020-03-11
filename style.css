@@ -1,0 +1,97 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin:0;
+}
+
+.grass, .sky , .road{
+    position: relative;
+}
+.sky{
+    height: 40%;
+    background: rgb(137, 194, 216);
+}
+
+.grass{
+    height: 20%;
+    background:rgb(33, 190, 33);
+}
+
+.road{
+    height: 40%;
+    background: dimgrey;
+    box-sizing: border-box;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+    width: 100%;
+}
+.lines{
+    box-sizing: border-box;
+    border: 5px dashed #fff;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 45%;
+}
+.cloud{
+    position: absolute;
+}
+
+.cloud:nth-child(1)
+{
+    width: 200px;
+    top:110px;
+    opacity: 0.5;
+    animation: wind 80s linear infinite reverse;
+}
+    
+.cloud:nth-child(2)
+{
+    width: 300px;
+    top:0px;
+    animation: wind 70s linear infinite reverse;
+    
+}
+    
+    /*/
+    put image
+    /*/
+    .dog
+    {
+        position:relative;
+        top:-80px;
+        left:0px;
+        animation-name: run;
+        animation-duration: 7s;
+        animation-fill-mode: both;
+        animation-delay: 2s;
+        animation-iteration-count:infinite;
+        animation-timing-function: cubic-bezier(1, 0.04, 0.98, 0.70);
+    }
+
+    .man{
+        position: relative;
+        top: 70px;
+        left: 0;
+        animation-name: run;
+        animation-duration: 10s;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        animation-direction:forward;
+    }
+
+    /*/
+    
+keyframes
+    /*/
+    @keyframes run{
+        from{ transform: translateX(-200px)}
+        to{ transform: translateX(1400px)}
+    }
+
+
+    @keyframes wind{
+        from{ left:-300px}
+        to{left: 100%;}
+    }
